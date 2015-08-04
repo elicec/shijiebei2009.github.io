@@ -3,19 +3,19 @@
 
     
   <url>
-    <loc>http://shijiebei2009.github.io/2015/07/30/Lombok-development-guidelines/</loc>
-    <lastmod>2015-07-30T13:39:53.100Z</lastmod>
+    <loc>http://shijiebei2009.github.io/2015/08/04/Based-on-the-extended-version-of-synonyms-Cilin-word-similarity-computing/</loc>
+    <lastmod>2015-08-04T14:09:04.402Z</lastmod>
     <data>
         <display>
-        <title>Lombok开发指南</title>
-        <pubTime>2015-07-30T13:33:11.000Z</pubTime>
+        <title>基于同义词词林扩展版的词语相似度计算</title>
+        <pubTime>2015-08-04T14:06:36.000Z</pubTime>
         
         <tag>Java </tag>
          
          
            
              
-              <breadCrumb title="Programming Notes" url="http://shijiebei2009.github.io/categories/Programming-Notes/"/>
+              <breadCrumb title="Algorithms" url="http://shijiebei2009.github.io/categories/Algorithms/"/>
           
         </display>
     </data>
@@ -24,7 +24,7 @@
     
   <url>
     <loc>http://shijiebei2009.github.io/2015/07/03/Python-implementation-of-the-longest-common-subsequences/</loc>
-    <lastmod>2015-07-28T23:42:46.112Z</lastmod>
+    <lastmod>2015-07-30T15:43:16.737Z</lastmod>
     <data>
         <display>
         <title>Python实现最长公共子序列-Longest Common Subsequences</title>
@@ -36,6 +36,26 @@
            
              
               <breadCrumb title="Algorithms" url="http://shijiebei2009.github.io/categories/Algorithms/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shijiebei2009.github.io/2015/07/30/Lombok-development-guidelines/</loc>
+    <lastmod>2015-07-30T15:43:16.736Z</lastmod>
+    <data>
+        <display>
+        <title>Lombok开发指南</title>
+        <pubTime>2015-07-30T13:33:11.000Z</pubTime>
+        
+        <tag>Java </tag>
+         
+         
+           
+             
+              <breadCrumb title="Programming Notes" url="http://shijiebei2009.github.io/categories/Programming-Notes/"/>
           
         </display>
     </data>
