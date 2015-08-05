@@ -36,9 +36,9 @@ Cb30A03@ 这方
 当编码相同，而只有末尾是“#”时，那么认为其相似度为e。
 例如`Ad02B04# 非洲人 亚洲人`  则其相似度为e。
 
-其中n是分支层的节点总数，k是两个分支间的距离。
+其中n是分支层的节点分支总数，k是两个分支间的距离。
 如：人 `Aa01A01=` 和 少儿 `Ab04B01=`
-由于A开头的编码个数为1309个，所以n=1309;在第2层，人的编码是a,少儿的编码是b所以k=1。
+以A开头的子分支只有14个，分别是Aa\*——An\*，而不是以A开头的所有结点的个数；在第2层，人的编码是a，少儿的编码是b所以k=1。
 
 该文献中给出的参数值为`a=0.65`，`b=0.8`，`c=0.9`，`d=0.96`，`e=0.5`，`f=0.1`。
 
@@ -82,11 +82,27 @@ import static java.lang.Math.cos;
 //相应的配置文件也要一致，2.x版本配置文件为log4j2.xml，1.x版本配置文件为log4j.xml
 public class WordSimilarity {
     /**
+<<<<<<< HEAD
      * when we use Lombok's Annotation, such as @Log4j * * @Log4j public class LogExample {
      * } * <p>
      * will generate:
      * public class LogExample { * private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.Logger.getLogger(LogExample.class); * }
      */
+=======
+     * when we use Lombok's Annotation, such as @Log4j
+     *
+     * @Log4j <br/>
+     * public class LogExample {
+     * }
+     * <p>
+     * will generate:
+     * public class LogExample {
+     * private static final org.apache.logging.log4j.Logger log = org.apache.logging.log4j.Logger.getLogger(LogExample.class);
+     * }
+     * </p>
+     */
+
+>>>>>>> master
     //定义一些常数先
     private final double a = 0.65;
     private final double b = 0.8;
@@ -97,6 +113,10 @@ public class WordSimilarity {
 
     private final double degrees = 180;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
     //存放的是以词为key，以该词的编码为values的List集合，其中一个词可能会有多个编码
     private static Map<String, ArrayList<String>> wordsEncode = new HashMap<String, ArrayList<String>>();
     //存放的是以编码为key，以该编码多对应的词为values的List集合，其中一个编码可能会有多个词
@@ -204,7 +224,10 @@ public class WordSimilarity {
                     }
                 }
                 log.info("res :" + res);
+<<<<<<< HEAD
                 res = Math.abs(res);
+=======
+>>>>>>> master
                 if (res > maxValue) {
                     maxValue = res;
                 }
@@ -254,15 +277,47 @@ public class WordSimilarity {
      * @return 经过计算之后得到N的值
      */
     public int getN(String encodeHead) {
+<<<<<<< HEAD
         int count = 0;
+=======
+        int length = StringUtils.length(encodeHead);
+        switch (length) {
+            case 1:
+                return getCount(encodeHead, 2);
+            case 2:
+                return getCount(encodeHead, 4);
+            case 4:
+                return getCount(encodeHead, 5);
+            case 5:
+                return getCount(encodeHead, 7);
+            default:
+                return 0;
+        }
+    }
+
+    public int getCount(String encodeHead, int end) {
+        Set<String> res = new HashSet<String>();
+>>>>>>> master
         Iterator<String> iter = encodeWords.keySet().iterator();
         while (iter.hasNext()) {
             String curr = iter.next();
             if (curr.startsWith(encodeHead)) {
+<<<<<<< HEAD
                 count += 1;
             }
         }
         return count;
+=======
+                String temp = curr.substring(0, end);
+                if (res.contains(temp)) {
+                    continue;
+                } else {
+                    res.add(temp);
+                }
+            }
+        }
+        return res.size();
+>>>>>>> master
     }
 
     /**
@@ -330,7 +385,11 @@ public class WordSimilarity {
     @Test
     public void testGetN() {
         readCiLin();
+<<<<<<< HEAD
         int a = getN("Aa");
+=======
+        int a = getN("A");
+>>>>>>> master
         System.out.println(a);
     }
 
@@ -376,12 +435,16 @@ public class WordSimilarity {
         readCiLin();
         double similarity = getSimilarity("非洲人", "亚洲人");
         System.out.println(similarity);
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
         double similarity1 = getSimilarity("骄傲", "仔细");
         System.out.println(similarity1);
     }
 
 }
+
 ```
 说明，在原论文中，使用cos函数计算有时候会得到负值，但是原文中并没有说明处理办法，我这里是将负值进行绝对值操作，得到正数结果，所以不知原文结果是否真是编程实验所得。
 
@@ -390,18 +453,21 @@ testGetSimilarity的测试结果如下所示：
 ```java
 人民--国民:1.0
 人民--群众:0.9576614882494312
-人民--党群:0.8402223838474816
+人民--党群:0.8978076452338418
 人民--良民:0.7182461161870735
-人民--同志:0.4505182190975489
-人民--成年人:0.4264383688438319
-人民--市民:0.4257868205339101
-人民--亲属:0.4244837239140664
-人民--志愿者:0.4235064014491837
-人民--先锋:0.4231806272942228
+人民--同志:0.6630145969121822
+人民--成年人:0.6306922220793977
+人民--市民:0.5405933332109123
+人民--亲属:0.36039555547394153
+人民--志愿者:0.22524722217121346
+人民--先锋:0.18019777773697077
 ```
 
+本文使用的是同义词词林的扩展版，而原论文使用的是同义词词林，由于两者存在微小差距，所以本文计算结果与论文中的计算结果存在稍许误差，如果算法没错，这是可以理解的！
+
 以上仅为个人理解，如若发现错误，欢迎大家积极留言指正！
-目前整个项目已经推送到GitHub上了，地址[点我](https://github.com/shijiebei2009/TongYiCiCiLin)。
+
+目前整个项目已经推送到GitHub上了，地址[点我](https://github.com/shijiebei2009/TongYiCiCiLin)。注意在文章末尾所注的参考资料中的链接里面的计算方法在求n的时候存在错误，代码我不确定是否是其自己实现，望莫要受其误导！
 
 参考资料：
 【1】http://www.cnblogs.com/einyboy/archive/2012/09/09/2677265.html
