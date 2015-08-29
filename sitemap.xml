@@ -2,10 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     
+  <url>
+    <loc>http://shijiebei2009.github.io/2015/08/29/Selenium-simulated-user-login-alipay-account-query-transaction-details/</loc>
+    <lastmod>2015-08-29T13:40:40.671Z</lastmod>
+    <data>
+        <display>
+        <title>使用Selenium模拟用户登录支付宝账户查询交易详情</title>
+        <pubTime>2015-08-29T13:39:00.000Z</pubTime>
+        
+        <tag>Selenium </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tools" url="http://shijiebei2009.github.io/categories/Tools/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://shijiebei2009.github.io/2015/08/04/Based-on-the-extended-version-of-synonyms-Cilin-word-similarity-computing/</loc>
-    <lastmod>2015-08-17T01:34:03.970Z</lastmod>
+    <lastmod>2015-08-25T13:36:54.497Z</lastmod>
     <data>
         <display>
         <title>基于同义词词林扩展版的词语相似度计算</title>
@@ -22,6 +41,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://shijiebei2009.github.io/2015/07/03/Python-implementation-of-the-longest-common-subsequences/</loc>
