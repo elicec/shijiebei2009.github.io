@@ -4,7 +4,7 @@
     
   <url>
     <loc>http://shijiebei2009.github.io/2015/08/29/Selenium-simulated-user-login-alipay-account-query-transaction-details/</loc>
-    <lastmod>2015-08-29T13:40:40.671Z</lastmod>
+    <lastmod>2015-08-29T13:56:12.430Z</lastmod>
     <data>
         <display>
         <title>使用Selenium模拟用户登录支付宝账户查询交易详情</title>
@@ -15,7 +15,27 @@
          
            
              
-              <breadCrumb title="Tools" url="http://shijiebei2009.github.io/categories/Tools/"/>
+              <breadCrumb title="Programming Notes" url="http://shijiebei2009.github.io/categories/Programming-Notes/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://shijiebei2009.github.io/2015/07/30/Lombok-development-guidelines/</loc>
+    <lastmod>2015-08-29T13:56:04.178Z</lastmod>
+    <data>
+        <display>
+        <title>Lombok开发指南</title>
+        <pubTime>2015-07-30T13:33:11.000Z</pubTime>
+        
+        <tag>Lombok </tag>
+         
+         
+           
+             
+              <breadCrumb title="Programming Notes" url="http://shijiebei2009.github.io/categories/Programming-Notes/"/>
           
         </display>
     </data>
@@ -57,26 +77,6 @@
            
              
               <breadCrumb title="Algorithms" url="http://shijiebei2009.github.io/categories/Algorithms/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://shijiebei2009.github.io/2015/07/30/Lombok-development-guidelines/</loc>
-    <lastmod>2015-07-30T15:43:16.736Z</lastmod>
-    <data>
-        <display>
-        <title>Lombok开发指南</title>
-        <pubTime>2015-07-30T13:33:11.000Z</pubTime>
-        
-        <tag>Java </tag>
-         
-         
-           
-             
-              <breadCrumb title="Programming Notes" url="http://shijiebei2009.github.io/categories/Programming-Notes/"/>
           
         </display>
     </data>
